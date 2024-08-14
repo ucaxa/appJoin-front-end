@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Alterar Produto </h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label> Nome produto:</label>
+                        <input type="text" class="form-control" id="nome" [(ngModel)]="produto.nome"
+                           placeholder="Nome do produto" name="nome">
+                    </div>
+
+                    <div class="form-group md-2">
+                        <label> Valor:</label>
+                        <input type="text" class="form-control" id="valor" [(ngModel)]="produto.valor"
+                           placeholder="Valor do produto" name="valor">
+                    </div>
+
+                 
+                      <div class="form-group">
+                        <label for="categoria">Categoria</label>
+                        <select id="categoria" class="form-control" [(ngModel)]="produto.categoriaId" name="categoriaId" required>
+                          <option *ngFor="let categoria of listaCategorias" [value]="categoria.id">{{ categoria.nome}}</option>
+                        </select>
+                      </div>
+
+
+                    
+                    <br />
+                    <button class="btn btn-success" type="submit">Salvar</button>
+                    
+                
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

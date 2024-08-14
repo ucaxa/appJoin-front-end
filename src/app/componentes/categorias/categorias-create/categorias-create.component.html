@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Nova Categoria </h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label> Nome categoria:</label>
+                        <input type="text" class="form-control" id="nome" [(ngModel)]="categoria.nome"
+                           placeholder="Informe o nome da categoria" name="nome">
+                    </div>
+
+                    <br />
+                    <button class="btn btn-success" type="submit">Salvar</button>
+
+                </form>
+                <div *ngIf="mensagem" class="alert alert-info mt-3">
+                    {{ mensagem }}
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
