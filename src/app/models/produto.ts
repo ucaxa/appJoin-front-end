@@ -5,6 +5,7 @@ export class Produto {
     nome?: string;
     valor?:number;
     categoriaId:number;
+    categoriaNome?:string;
     dataCadastro?:string;
     dataUltimaAtualizacao?:string;
 
